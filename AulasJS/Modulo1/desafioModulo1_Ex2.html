@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Curso Javascript - Modulo 1</title>
+  </head>
+  <body>
+    <script>
+      function pares(x, y) {
+        var returnArray = [], current;
+
+        if (y<x){
+          var swap = x;
+          x = y;
+          y = swap;
+        }
+
+        current = x;
+        while (current<=y) {
+          if (current % 2 === 0){
+            returnArray.push(current);
+            console.log(current);
+          }
+          current++;
+        }
+        return returnArray;
+      }
+      funcReturn = pares(342, 322);
+      console.log(funcReturn);
+    </script>
+  </body>
+</html>

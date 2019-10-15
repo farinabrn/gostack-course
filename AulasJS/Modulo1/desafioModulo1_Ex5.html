@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Curso Javascript - Modulo 1</title>
+  </head>
+  <body>
+    <script>
+      function printUserSkills(usersArray) {
+        var ret = "";
+        for (const user of usersArray) {
+          var userSkills = `O ${user.nome} possui as habilidades: ${user.habilidades.join(', ')}\n`;
+          console.log(userSkills);
+          ret += userSkills;
+        }
+        return ret;
+      }
+
+      var usuarios = [
+        {
+          nome: "Diego",
+          habilidades: ["Javascript", "ReactJS", "Redux"]
+        },
+        {
+          nome: "Gabriel",
+          habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+        }
+      ];
+
+      funcReturn = printUserSkills(usuarios);
+      console.log(funcReturn);
+    </script>
+  </body>
+</html>

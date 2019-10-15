@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Curso Javascript - Modulo 1</title>
+  </head>
+  <body>
+    <script>
+      function toStringAddress(address) {
+        with (address) {
+          return `O usuário mora em ${cidade} / ${uf}, no bairro ${bairro}, na rua "${rua}" com o nº ${numero}.`;
+        }
+        // return `O usuário mora em ${address.cidade} / ${address.uf}, no bairro ${address.bairro}, na rua "${address.rua}" com o nº ${address.numero}.`;
+      }
+      var endereco = {
+        rua: "Rua dos pinheiros",
+        numero: 1293,
+        bairro: "Centro",
+        cidade: "São Paulo",
+        uf: "SP"
+      };
+      funcReturn = toStringAddress(endereco);
+      console.log(funcReturn);
+    </script>
+  </body>
+</html>
