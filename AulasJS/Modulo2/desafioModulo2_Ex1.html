@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Curso Javascript - Modulo 2</title>
+  </head>
+  <body>
+    <div id="app">
+      <button id onclick="addRedSquare()">Add Square</button>
+    </div>
+    <div id="squares"></div>
+    <script>
+      // codigo javascript
+      function addRedSquare() {
+        var squareElement = document.createElement('div');
+        squareElement.style.width = 100;
+        squareElement.style.height = 100;
+        squareElement.style.backgroundColor = '#f00';
+
+        var divSquares = document.querySelector('div#squares');
+        divSquares.appendChild(document.createElement('br'));
+        divSquares.appendChild(squareElement);
+      }
+    </script>
+  </body>
+</html>

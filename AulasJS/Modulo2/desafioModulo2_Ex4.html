@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>Curso Javascript - Modulo 2</title>
+  </head>
+  <body>
+    <div id="form">
+      <input id="lvalue" type="text"/>
+      <button onclick="feedNewList()">Atribuir valores a lista</button>
+    </div>
+    <div id="list">
+      <ul></ul>
+    </div>
+    <script>
+      // codigo javascript
+      function feedList(nomesL) {
+        var uListElement = document.querySelector('div#list ul');
+      
+        for(var nome of nomesL) {
+          var ulItemElement = document.createElement('li');
+          ulItemElement.appendChild(document.createTextNode(nome));
+          uListElement.appendChild(ulItemElement);
+        }
+      }
+
+      function feedNewList() {
+        var inputList = document.getElementById('lvalue');
+        var novosNomes = inputList.value.split(', ');
+        feedList(novosNomes);
+        inputList.value = '';
+      }
+
+      var nomes = ["Diego", "Gabriel", "Lucas"];
+      feedList(nomes);
+    </script>
+  </body>
+</html>

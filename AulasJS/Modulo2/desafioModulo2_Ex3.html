@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Curso Javascript - Modulo 2</title>
+  </head>
+  <body>
+    <div id="list"></div>
+    <script>
+      // codigo javascript
+      var nomes = ["Diego", "Gabriel", "Lucas"];
+      var divListElement = document.getElementById('list');
+      var uListElement = document.createElement('ul');
+      divListElement.appendChild(uListElement);
+      
+      for(var nome of nomes) {
+        var ulItemElement = document.createElement('li');
+        ulItemElement.appendChild(document.createTextNode(nome));
+        uListElement.appendChild(ulItemElement);
+      }
+    </script>
+  </body>
+</html>
