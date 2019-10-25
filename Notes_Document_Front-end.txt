@@ -1,0 +1,18 @@
+StoryBook
+https://storybook.js.org/
+Documentação de frontend
+Documenração codificada c/ possibilidades de uso de um component com as props e valores aceitos
+Lista os components do projeto
+Feita para desenvolvedores e você mesmo, não para o usuário final
+Já vem com alguns exemplos
+withInfo = pacote mais crucial para ver infos do pacote no story book
+  showInfo - possibilita mostrar como o componente foi utilizado
+exibe as props do component e como eles são
+tambem da pra adicionar um tema ao story book = customtheme.js = ficar mais bonito
+para documentação do backend é melhor ser utilizado o StopLite
+storiesof 
+npx -p @storybook/cli sb init
+yarn add @storybook/addin-info @storybook/addon-centered babel-loader @babel/core -D
+
+https://github.com/Rocketseat/gostack-live-storybook
+
