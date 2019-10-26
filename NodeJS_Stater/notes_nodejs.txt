@@ -1,0 +1,13 @@
+Permite que utilize JS,
+Que é geralmente utilizada no front-end, para manipulação de interface no browser, e posteriormente tambem para desenvolvimento mobile, e agora no lado do servidor.
+Ele é uma plataforma, que utiliza do interpretador com engine V8, desenvolvida pela Google para o chrome, no lado do back-end para tratar requisições e respostas no servidor, trabalhar com banco de dados, entre outras atividades.
+Full MVC = Cria parte visual da sua aplicação junto do seu backend, com Views, ae Wordpress, com frontend e backend unidos
+API Rest = separa back-end e front-end. Onde o Backend que manipula infos do db e trata requisições e respostas e o front separado, com o react ou angular.
+Beneficios = Rest oferece flexibilidade, e utiliza a mesma API para diferentes interfaces.
+NodeJS Express e Mongo DB
+
+NPM gera package.json que guarda a versão das dependencias instaladas no projeto
+Express => microframework que trata rotas e views, endereços url que serao utilizados na api e suas respostas
+Nodemon => Faz auto-reload, ou seja reinicializa o servidor toda vez que uma mudança for detectada
+Docker faz a conteinerização de recursos ou softwares ou qqr tipo de aplicação na maquina dentro de um container, como se fossem maquinas virtuais, para desenvolvimento, isolando a aplicação do sistema, ou seja é criada uma vm com um so linux contendo o serviço desejado, no caso o mongodb 
+Mongoose = O mongoose é um ORM de bancos não relacionais, por exemplo o mongo, ORM encapsula a logica das operações do banco de dados através de código, para não utilizar querys, ou a linguagem utilizada pelo DB, para utilizar codigo JS =  Object Relational Mapping.
