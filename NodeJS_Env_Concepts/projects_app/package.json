@@ -1,0 +1,17 @@
+{
+  "name": "projects_app",
+  "version": "1.0.0",
+  "description": "Project of challenge in module 2 - Enviroment and concepts of Node JS - Application for store projecs and their tasks",
+  "main": "index.js",
+  "author": "Bruno Farina",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}
