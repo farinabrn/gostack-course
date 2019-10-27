@@ -1,0 +1,57 @@
+Conceitos Node
+Permite utilizar JS no Backend, no server-side, backend, ao contrário do front-end com animações e alertas clicks e etc, onde fica a camada de com regras negócio da aplicação como acesso ao banco de dados, integração com serviços de terceiros como pagamentos ou sistemas de Notafiscal, onde a interação com usuários são feitas através das rotas, ou endereço , é disparado um código para tratar essa ação.
+O node não é uma nova linguagem, é uma plataforma para desenvolvimento de apps em js construida utilizando a engine V8 do google chrome, para interpretar o js no backend com velocidade, comparavel a php, ruby, python e Go, mas com vantagens
+NPM => Node Package manager = instala ferramentas de terceiros no projeto como lib de pagamento, para facilitar o desenvolvimento, além de poder disponibilizar e escrever sua propria biblioteca p/ outros desenv./projetos.
+YARN => mais avançado e com melhores funcionalidades que o npm, como por exemp. workspaces p/ compartilhar libs entres projetos
+Equivalentes a Composer p/ php, rubyGems p/ruby e pip do python.
+Caract. do node
+Node segue arquitetura de Event-loop, baseada em eventos, utilizando a call stack => pilha de eventos, que são funcoes no proj. que são empilhadas para execução continua, como um while que executa as calls nessa pilha.
+Node tbm é single thread; Utiliza apenas um core do processador. Mas utiliza libs do c++ com o LibUV, para usar multithreads com a pilha;
+Arquitetura Non-blocking I/O: Input e output não bloqueante => quando faz requisição, dos não são retornados de uma só vez, pode ser retornado em partes. Resposta não bloqueia o resultado. ao contrario do php que encerra a conexao com o cliente, mantem a conexcao aberta para por exemplor chats. por exemblo web socket.
+Call Stack é uma pilha que recebe funcoes e as armazena e processa do tipo FIFO, utilizando multithreads por debaixo dos panos.
+Frameworks do node:
+Express => sem opinição = nao tem estrutura fechada, da liberdade ao dev de criar a estrutura.
+Microframework com poucas funcionalidades que funcionam muito bem
+Muito utilizado em microserviços, para dividir a aplicação, como serviços e seu processamento fica separado.
+Outros> AdonisJS e NestJS.
+
+API Rest
+Requisiçao e resposta:
+Requisição é feita pelo cliente, por ex. Browser, acessando uma url, com chamada ajax por uma url, com o fluxo de envio, recebimento pelo servidor, resposta é retornada após o processamento como por exemplo uma listagem de usuarios onde é envolvido o bd, essa listagem é retornada para o cliente que recebe e processa essa estrutura de dados, por exemplo exibir em tela, ao contrario do mvc onde o servidor retorna o html pronto com o conteudo renderizado. Os dados são enviados e o front se responsabiliza por exibir o conteudo.
+Essas rotas utilizam o protocolo de comunicação HTTP com os verbos indicando o que deve ser feito
+Get - busca informações no serviço 
+Post - cria informacao
+Put - altera informacao
+Delete - deleta ..
+Acessando recurso/rota passando parametros
+Beneficios:
+Multiplos clientes utilizando o mesmo servico backend, mesma estrutura serve diversas aplicações ou disponibiliza a aplicacao publicamente de maneira padronizada através da mesma estrutura..
+JSON : JavaScript Object Notation, estrutura de dados do js com chaves e valor associados, retornados, que é um formato global adotado e utilizado por todas, ou pelo menos a maioria das  aplicações rest, com diversos valores dos tipos string, numericos, vetores e objetos.
+Conteudo das Requisicoes
+GET http://api.com/company/1/users?page=2
+usuarios de uma compania com id 1
+url = http://api.com
+route = /company/1/users
+route params = /1
+query params = ?page=2
+Criar usuario na compania com id 1
+POST http://api.com/company/1/users
+body envia o conteudo json a ser cadastrados = utilizado em com verbos put e post
+Usados para não poluir a url do navegador e ficarem invisiveis na requisição
+Headers = informações adicionais sem relação com o conteudo da requisicao. utilizado para enviar token de autorizacao, autenticacao, locale, etc
+
+Http codes:
+1XX: informational
+2XX: Success
+  200: Success - resposta com listagem/ usuario
+  201: Created - criou recurso
+3XX: Redirection
+  301: Moved permanently
+  302: moved
+4XX: Client Error - enviou infos erradas, ou rotas erradas, coisas faltando na requisicao
+  400: bad request : faltou parametro ou informacao, ex email
+  401: Unauthorized - nao autorizado acesso ao recurso
+  404: not found
+500: Server error: erros que acontecen do lado do servidor
+  Internal server erros
+  
